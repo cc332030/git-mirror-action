@@ -14,7 +14,7 @@ inputs:
     default: ''
 runs:
   using: 'docker'
-  image: c332030/alpine-git-mirror
+  image: docker://c332030/alpine-git-mirror
   args:
     - ${{ inputs.source-repo }}
     - ${{ inputs.destination-repo }}
