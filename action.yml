@@ -1,5 +1,5 @@
 
-name: 'git mirror'
+name: 'Github Repository Mirror'
 
 description: 'Action for mirroring a repository in another location (Bitbucket, GitHub, GitLab,…) using SSH.'
 
