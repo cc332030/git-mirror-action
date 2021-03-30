@@ -28,6 +28,4 @@ jobs:
 
 ----
 
-==
-
 modify from wearerequired/git-mirror-action
