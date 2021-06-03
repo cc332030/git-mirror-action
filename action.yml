@@ -8,18 +8,13 @@ branding:
   color: 'orange'
 
 inputs:
-  source-repo:
-    description: 'SSH URL of the source repo.'
+  destination:
+    description: 'destination repo domain body.'
     required: true
-    default: ''
-  destination-repo:
-    description: 'SSH URL of the destination repo.'
-    required: true
-    default: ''
+    default: 'gitee'
 
 runs:
   using: 'docker'
-  image: docker://c332030/alpine-git-mirror
+  image: docker://c332030/alpine-git-mirror:github
   args:
-    - ${{ inputs.source-repo }}
-    - ${{ inputs.destination-repo }}
+    - ${{ inputs.destination }}
