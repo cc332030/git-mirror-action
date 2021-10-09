@@ -1,25 +1,15 @@
 
 name: 'Github Repository Mirror'
 
-description: 'Action for mirroring a repository in another location (Bitbucket, GitHub, GitLab,…) using SSH.'
+description: 'Action for mirror a repository to another location(default Gitee) using SSH.'
 
 branding:
   icon: 'copy'
   color: 'orange'
 
-inputs:
-  source-repo:
-    description: 'SSH URL of the source repo.'
-    required: true
-    default: ''
-  destination-repo:
-    description: 'SSH URL of the destination repo.'
-    required: true
-    default: ''
-
 runs:
-  using: 'docker'
-  image: docker://c332030/alpine-git-mirror
-  args:
-    - ${{ inputs.source-repo }}
-    - ${{ inputs.destination-repo }}
+  using: "composite"
+  steps:
+    - id: git-mirror
+      run: curl -sL https://github.com/cc332030/git/raw/master/script/mirror/linux/mirror-github.sh | sh
+      shell: bash
