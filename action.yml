@@ -7,6 +7,11 @@ branding:
   icon: 'copy'
   color: 'orange'
 
+inputs:
+  destination-repo:
+    description: 'SSH URL of the destination repo.'
+    required: false
+
 runs:
   using: "composite"
   steps:
