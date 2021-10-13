@@ -15,16 +15,16 @@ name: mirror
 on: [push, pull_request]
 
 jobs:
-  sync:
+  mirror:
     runs-on: ubuntu-latest
     steps:
-      - uses: cc332030/git-mirror-action@1.0.0
-        timeout-minutes: 2
+      - uses: cc332030/init-ssh-action@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      - uses: cc332030/git-mirror-action@main
         with:
-          source-repo: git@github.com:${{ github.repository }}.git
-          destination-repo: git@gitee.com:${{ github.actor }}/${{ github.event.repository.name }}.git
+          destination-repo: gitee(default)
+        timeout-minutes: 2
 
 ----
 
