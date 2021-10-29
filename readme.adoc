@@ -22,15 +22,12 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
       - uses: cc332030/git-mirror-action@main
-        with:
+        env:
           # case1: only domain, gitee -> git@gitee.com/$GITHUB_ACTOR/REPOSITORY_NAME
           # case2: full path, git@gitee.com/cc332030/git-mirror-action
-          destination-repo: gitee(default)
+          DESTINATION: gitee(default)
         timeout-minutes: 2
 
 ----
-
-destination-repo:
-. case1:
 
 modify from wearerequired/git-mirror-action
