@@ -16,5 +16,5 @@ runs:
   using: "composite"
   steps:
     - id: git-mirror
-      run: curl -s https://raw.githubusercontent.com/cc332030/git/master/script/mirror/linux/mirror-github.sh | sh -s $*
+      run: curl -s https://raw.githubusercontent.com/cc332030/git/master/script/mirror/linux/mirror-github.sh | sh -s
       shell: bash
