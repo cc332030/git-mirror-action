@@ -2,13 +2,13 @@
   "name": "git-mirror-action",
   "version": "1.0.0",
   "description": "git mirror action",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "clean": "rimraf dist",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run build && node ./dist/cache/index.js",
+    "start": "npm run build && node dist/index.js",
     "build": "tsc --build",
-    "ncc": "npm run build && ncc build"
+    "ncc": "npm run build && ncc build dist/index.js -o ."
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/cc332030/git-mirror-action#readme",
   "dependencies": {
-    "ncc": "^0.3.6",
+    "@vercel/ncc": "^0.34.0",
     "rimraf": "^3.0.2",
     "typescript": "^4.7.4"
   }
