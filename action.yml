@@ -13,8 +13,5 @@ inputs:
     required: false
 
 runs:
-  using: "composite"
-  steps:
-    - id: git-mirror
-      run: curl -sL https://github.com/cc332030/git/raw/master/script/mirror/linux/mirror-github.sh | sh
-      shell: bash
+  using: 'docker'
+  image: 'Dockerfile'
