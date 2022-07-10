@@ -8,10 +8,12 @@ branding:
   color: 'orange'
 
 inputs:
-  destination-repo:
-    description: 'SSH URL of the destination repo.'
+  destination:
+    description: 'Destination repo.'
     required: false
 
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.destination }}
