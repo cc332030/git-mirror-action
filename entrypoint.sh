@@ -12,3 +12,8 @@ curl_sh https://github.com/cc332030/linux/raw/master/script/init-ssh/init-ssh-pr
 curl_sh https://github.com/cc332030/linux/raw/master/script/init-ssh/init-ssh.sh
 
 curl_sh https://github.com/cc332030/git/raw/master/script/mirror/linux/mirror-github.sh
+
+if [ -n "$COMMAND" ]
+then
+  ${COMMAND} || true
+fi
