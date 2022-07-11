@@ -7,11 +7,6 @@ branding:
   icon: 'copy'
   color: 'orange'
 
-inputs:
-  destination:
-    description: 'Destination repo.'
-    required: false
-
 runs:
   using: 'docker'
   image: 'Dockerfile'
