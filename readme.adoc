@@ -7,20 +7,6 @@
 - add .github/workflows/mirror.yml into a repository with follow content
 - push
 
-[source,yaml]
-----
-
-name: mirror
-
-on: [push, pull_request]
-
-jobs:
-  mirror:
-    uses: cc332030/git/.github/workflows/mirror.yml@master
-    secrets:
-      SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-      DESTINATION: example: gitee / git@gitee.com:${{ github.repository }}.git
-
-----
+see `.github/workflows/example`
 
 modify from wearerequired/git-mirror-action
