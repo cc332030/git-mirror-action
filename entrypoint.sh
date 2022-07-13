@@ -15,5 +15,5 @@ curl_sh /git/raw/master/script/mirror/linux/mirror-github.sh
 
 if [ -n "$COMMAND" ]
 then
-  ${COMMAND} || true
+  sh -c "${COMMAND}" || true
 fi
