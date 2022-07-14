@@ -4,6 +4,8 @@ RUN apk add --no-cache \
     curl \
     git openssh-client
 
+ENV C_GITHUB_URL=https://github.com/cc332030
+
 ADD *.sh /
 
 RUN ["chmod", "+x", "/entrypoint.sh"]

@@ -5,7 +5,7 @@ set -e
 parameter=$*
 
 curl_sh(){
-  sh -c "curl -sL https://github.com/cc332030$1 | sh -s -- $parameter"
+  sh -c "curl -sL $C_GITHUB_URL$1 | sh -s -- $parameter"
 }
 
 curl_sh /linux/raw/master/script/init-ssh/init-ssh-pre.sh
