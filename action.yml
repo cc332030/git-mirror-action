@@ -10,4 +10,3 @@ branding:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  post-entrypoint: 'rm -rf ~/.ssh'
