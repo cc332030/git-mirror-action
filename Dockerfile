@@ -1,6 +1,7 @@
 FROM alpine
 
 RUN apk add --no-cache \
+    dig \
     curl \
     git openssh-client
 
