@@ -1,8 +1,7 @@
 FROM alpine
 
 RUN apk add --no-cache \
-    dig \
-    curl \
+    bind-tools curl \
     git openssh-client
 
 ENV C_GITHUB_URL=https://github.com/cc332030
